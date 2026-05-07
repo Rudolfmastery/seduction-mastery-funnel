@@ -3,9 +3,9 @@
 :root {
   --background: #080808;
   --foreground: #ffffff;
-  --accent: #c9a44c;
-  --accent-hover: #e5c16b;
-  --card-bg: rgba(20, 20, 20, 0.7);
+  --accent: #D3AE3D;
+  --accent-hover: #E5C16B;
+  --card-bg: rgba(15, 15, 15, 0.95);
   --card-border: rgba(255, 255, 255, 0.1);
   --input-bg: rgba(255, 255, 255, 0.05);
   --font-serif: 'Playfair Display', serif;
@@ -98,11 +98,11 @@ body {
 }
 
 .form-card {
-  background: rgba(15, 15, 15, 0.9);
-  border: 1px solid var(--accent);
-  border-radius: 16px;
-  padding: 3rem 2.5rem;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  background: #111111;
+  border: 1px solid rgba(211, 174, 61, 0.3);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
   position: relative;
   z-index: 10;
 }

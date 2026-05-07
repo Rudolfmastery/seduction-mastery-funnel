@@ -24,10 +24,10 @@ export default function Home() {
         {/* Logo Section */}
         <div className="logo" style={{ paddingTop: "2rem" }}>
           <div style={{ textAlign: "center" }}>
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="var(--accent)" style={{ marginBottom: "0.5rem" }}>
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#D3AE3D" style={{ marginBottom: "0.5rem" }}>
               <path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z" />
             </svg>
-            <h1 className="serif" style={{ fontSize: "1.2rem", letterSpacing: "4px", fontWeight: "bold" }}>SEDUCCIÓN</h1>
+            <h1 className="serif" style={{ fontSize: "1.2rem", letterSpacing: "4px", fontWeight: "bold", color: "#D3AE3D" }}>SEDUCCIÓN</h1>
             <p className="ls-wide" style={{ fontSize: "0.6rem", color: "#666", marginTop: "-3px" }}>MODERNA</p>
           </div>
         </div>
@@ -108,21 +108,34 @@ export default function Home() {
           {/* Right Column - Form */}
           <div className="animate-up" style={{ animationDelay: "0.2s" }}>
             <div className="form-card">
+              {/* Form Header */}
               <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-                <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "var(--accent)", fontSize: "0.7rem", letterSpacing: "1px", marginBottom: "1rem" }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                <div style={{ 
+                  display: "inline-flex", 
+                  alignItems: "center", 
+                  gap: "0.6rem", 
+                  color: "var(--accent)", 
+                  fontSize: "0.75rem", 
+                  fontWeight: "600",
+                  letterSpacing: "1px", 
+                  marginBottom: "1.2rem",
+                  background: "rgba(211, 174, 61, 0.05)",
+                  padding: "0.4rem 1rem",
+                  borderRadius: "20px",
+                  border: "1px solid rgba(211, 174, 61, 0.1)"
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                   ACCESO 100% GRATUITO
                 </div>
-                <h2 className="serif" style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>Reserva tu lugar ahora</h2>
-                <p style={{ color: "#666", fontSize: "0.9rem" }}>La clase es gratuita por tiempo limitado.</p>
+                <h2 className="serif" style={{ fontSize: "2.4rem", marginBottom: "0.8rem", fontWeight: "400" }}>Reserva tu lugar ahora</h2>
+                <p style={{ color: "#888", fontSize: "0.95rem" }}>La clase es gratuita por tiempo limitado.</p>
               </div>
 
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label className="form-label">NOMBRE COMPLETO</label>
+                  <label className="form-label" style={{ fontSize: "0.7rem", letterSpacing: "1px", fontWeight: "600" }}>NOMBRE COMPLETO</label>
                   <input
                     type="text"
                     className="form-input"
@@ -134,7 +147,7 @@ export default function Home() {
                 </div>
                 
                 <div className="form-group">
-                  <label className="form-label">CORREO ELECTRÓNICO</label>
+                  <label className="form-label" style={{ fontSize: "0.7rem", letterSpacing: "1px", fontWeight: "600" }}>CORREO ELECTRÓNICO</label>
                   <input
                     type="email"
                     className="form-input"
@@ -146,7 +159,7 @@ export default function Home() {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">WHATSAPP</label>
+                  <label className="form-label" style={{ fontSize: "0.7rem", letterSpacing: "1px", fontWeight: "600" }}>WHATSAPP</label>
                   <input
                     type="tel"
                     className="form-input"
@@ -157,15 +170,15 @@ export default function Home() {
                   />
                 </div>
 
-                <button type="submit" className="btn btn-primary" style={{ marginTop: "1rem", gap: "1rem" }}>
-                  VER CLASE GRATIS AHORA
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <button type="submit" className="btn btn-primary" style={{ marginTop: "1rem", borderRadius: "4px", padding: "1.3rem" }}>
+                  <span style={{ flex: 1, textAlign: "center" }}>VER CLASE GRATIS AHORA</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
                 </button>
 
-                <div className="privacy-note">
+                <div className="privacy-note" style={{ opacity: 0.6 }}>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
