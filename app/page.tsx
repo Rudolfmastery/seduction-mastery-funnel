@@ -13,27 +13,27 @@ export default function Home() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send data to your CRM (ActiveCampaign, etc.)
-    console.log("Form data:", formData);
-    // Redirect to the tripwire page
     router.push("/oferta-especial");
   };
 
   return (
-    <main style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
-      <div className="container" style={{ maxWidth: "600px", textAlign: "center" }}>
-        <div className="fade-in">
-          <h2 className="gold-text" style={{ fontSize: "1.2rem", letterSpacing: "2px", marginBottom: "1rem" }}>
+    <main style={{ minHeight: "100vh", position: "relative", zIndex: 1 }}>
+      <div className="bg-overlay" />
+      
+      <div style={{ maxWidth: "800px", margin: "0 auto", padding: "6rem 1.5rem", textAlign: "center" }}>
+        <div className="animate-up">
+          <h2 className="gold-text" style={{ fontSize: "0.9rem", letterSpacing: "4px", marginBottom: "1.5rem", textTransform: "uppercase" }}>
             ACCESO EXCLUSIVO
           </h2>
-          <h1 style={{ fontSize: "3rem", marginBottom: "1.5rem" }}>
-            Domina el Arte de la <span className="gold-text">Seducción Moderna</span>
+          <h1 style={{ fontSize: "3.5rem", marginBottom: "1rem", color: "#fff" }}>
+            Domina el Arte de la <br />
+            <span className="gold-text">Seducción Moderna</span>
           </h1>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.2rem", marginBottom: "2.5rem" }}>
+          <p style={{ color: "#aaa", fontSize: "1.1rem", marginBottom: "3.5rem", maxWidth: "600px", margin: "0 auto 3.5rem", lineHeight: "1.6" }}>
             Regístrate ahora para acceder a la clase gratuita donde revelamos los 3 pilares psicológicos para atraer a la mujer que deseas.
           </p>
 
-          <form onSubmit={handleSubmit} className="glass" style={{ padding: "2.5rem", textAlign: "left" }}>
+          <form onSubmit={handleSubmit} className="glass-form" style={{ maxWidth: "500px", margin: "0 auto" }}>
             <div className="form-group">
               <label className="form-label">Nombre Completo</label>
               <input
@@ -45,6 +45,7 @@ export default function Home() {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
             </div>
+            
             <div className="form-group">
               <label className="form-label">Correo Electrónico</label>
               <input
@@ -56,6 +57,7 @@ export default function Home() {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
             </div>
+
             <div className="form-group">
               <label className="form-label">WhatsApp</label>
               <input
@@ -67,12 +69,18 @@ export default function Home() {
                 onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
               />
             </div>
-            <button type="submit" className="btn btn-primary" style={{ width: "100%", marginTop: "1rem" }}>
+
+            <button type="submit" className="btn btn-primary" style={{ marginTop: "1rem" }}>
               VER CLASE GRATIS AHORA
             </button>
-            <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "1rem", textAlign: "center" }}>
-              🔒 Tu información está 100% protegida.
-            </p>
+
+            <div className="privacy-note">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Tu información está 100% protegida.</span>
+            </div>
           </form>
         </div>
       </div>
